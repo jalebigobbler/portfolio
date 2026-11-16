@@ -5,190 +5,203 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hanaan Hussain</title>
     <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".navbar__links");
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".navbar__links");
 
-    // Scroll event listener to highlight current section in the navbar
-    window.addEventListener("scroll", () => {
-      let currentSection = "";
+        window.addEventListener("scroll", () => {
+          let currentSection = "";
+          const pageBottomOffset = window.innerHeight + window.pageYOffset;
+          const documentHeight = document.body.scrollHeight;
 
-      const pageBottomOffset = window.innerHeight + window.pageYOffset;
-      const documentHeight = document.body.scrollHeight;
-
-      if (pageBottomOffset >= documentHeight) {
-        currentSection = "contact";
-      } else {
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-          const buffer = 150;
-
-          if (
-            pageYOffset >= sectionTop - buffer &&
-            pageYOffset < sectionTop + sectionHeight - buffer
-          ) {
-            currentSection = section.getAttribute("id");
+          if (pageBottomOffset >= documentHeight) {
+            currentSection = "contact";
+          } else {
+            sections.forEach((section) => {
+              const sectionTop = section.offsetTop;
+              const sectionHeight = section.clientHeight;
+              const buffer = 150;
+              if (
+                pageYOffset >= sectionTop - buffer &&
+                pageYOffset < sectionTop + sectionHeight - buffer
+              ) {
+                currentSection = section.getAttribute("id");
+              }
+            });
           }
-        });
-      }
 
-      navLinks.forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href").includes(currentSection)) {
-          link.classList.add("active");
-        }
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (currentSection && link.getAttribute("href").includes(currentSection)) {
+              link.classList.add("active");
+            }
+          });
+        });
       });
-    });
-  });
-</script>
+    </script>
   </head>
   <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <h1 class="navbar__logo">Hanaan<span>&#160;Hussain</span></h1>
+        <ul class="navbar__menu">
+          <li class="navbar__item"><a href="#home" class="navbar__links">Home</a></li>
+          <li class="navbar__item"><a href="#projects" class="navbar__links">Work Experience</a></li>
+          <li class="navbar__item"><a href="#services" class="navbar__links">Education</a></li>
+          <li class="navbar__item"><a href="#contact" class="navbar__links">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-<!-- Navbar Section -->
-
-  <nav class="navbar">
-    <div class="navbar__container">
-      <h1 class="navbar__logo">Hanaan<span>&#160;Hussain</span></h1>
-      <ul class="navbar__menu">
-        <li class="navbar__item">
-          <a href="#home" class="navbar__links">Home</a>
-        </li>
-        <li class="navbar__item">
-          <a href="#projects" class="navbar__links">Work Experience</a>
-        </li>
-        <li class="navbar__item">
-          <a href="#services" class="navbar__links">Services</a>
-        </li>
-        <li class="navbar__item">
-          <a href="#contact" class="navbar__links">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</html>
-
-<!-- Home Section -->
-
-<section id="home">
-    <div class="home__section">
-      <div class="home__wrapper">
-        <div class="column__left">
-          <h1>Hello, I'm <span class="name__span">Hanaan</span></h1>
-          <h2>I'm a <span class="info__me">Student/WebDeveloper</span></h2>
-          <p>
-            I have experience in building games and websites for benefit of my education and I am currently studying for my GCSEs in school.
-          </p>
-          <div class="social-media-icons">
-            <a class="social-icon" target="_blank"><i class='bx bxl-github'></i></a>
-            <a class="social-icon" target="_blank"><i class='bx bxl-instagram'></i></a>
-            <a class="social-icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
-            <a class="social-icon" target="_blank"><i class='bx bxl-twitter'></i></a>
+    <!-- Home -->
+    <section id="home">
+      <div class="home__section">
+        <div class="home__wrapper">
+          <div class="column__left">
+            <p class="headline__tag">Senior Digital Ambassador</p>
+            <h1>Hello, I'm <span class="name__span">Hanaan</span></h1>
+            <h2>an aspiring <span class="info__me">Student/Degree Apprentice</span> in IT/Tech</h2>
+            <p>
+              I'm a motivated Year 13 student predicted A*AA in Economics, Maths and Physics, with experience in Python, HTML, CSS and JavaScript and a strong interest in software engineering. Work experience with Cisco, CyberFirst Advanced and Discover Tech has developed my problem-solving, teamwork and communication skills. I'm seeking a degree apprenticeship where I can grow as a software engineer while contributing to real-world projects.
+            </p>
+            <div class="social-media-icons">
+              <a class="social-icon" href="https://www.linkedin.com/in/hanaan-hussain-472a913a0/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+            </div>
+          </div>
+          <div class="column__right">
+            <img src="ai-brain.svg" alt="brain" class="home__img" />
+          </div>
+          <div class="btn-group">
+            <a href="#projects" class="btn">Work Experience</a>
+            <a href="#contact" class="btn">Contact</a>
+            <a href="Hanaan-Hussain-CV.pdf" class="btn" target="_blank" rel="noopener">View CV</a>
           </div>
         </div>
-        <div class="column__right">
-          <img src="ai-brain.svg" alt="brain" class="home__img" />
-        </div>
-        <div class="btn-group">
-          <a href="#projects" class="btn">Projects</a>
-          <a href="#contact" class="btn">Contact</a>
+      </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section id="projects">
+      <div class="projects">
+        <h1>Work Experience</h1>
+        <div class="projects__wrapper">
+          <div class="projects__card card--cisco">
+            <h2>Work Experience 1</h2>
+            <h3>Cisco</h3>
+            <p class="card__role">Hybrid Technology Work Experience Student</p>
+            <p class="card__meta">Jul 2026 · Bedfont</p>
+            <details>
+              <summary>View</summary>
+              <ul>
+                <li>Took part in Q&amp;A sessions with Cisco professionals.</li>
+                <li>Worked in a team of 5 to develop a Dragon's Den-style AI app concept that encourages recycling and reduces littering, presented to an audience of 60.</li>
+              </ul>
+            </details>
+          </div>
+
+          <div class="projects__card card--cyber">
+            <h2>Work Experience 2</h2>
+            <h3>CyberFirst</h3>
+            <p class="card__role">Cybersecurity Advanced Participant</p>
+            <p class="card__meta">Jul 2026 · Royal Holloway, Surrey</p>
+            <details>
+              <summary>View</summary>
+              <ul>
+                <li>Completed the five-day CyberFirst Advanced programme at Royal Holloway, applying penetration testing and cybersecurity techniques in hands-on labs.</li>
+                <li>Worked in a team of 3 on a Capture the Flag (CTF) challenge, achieving the third-fastest capture out of 10 teams.</li>
+              </ul>
+            </details>
+          </div>
+
+          <div class="projects__card card--lloyds">
+            <h2>Work Experience 3</h2>
+            <h3>Lloyds Banking Group</h3>
+            <p class="card__role">Technology Virtual Work Experience Student</p>
+            <p class="card__meta">Jan 2026 · Remote</p>
+            <details>
+              <summary>View</summary>
+              <ul>
+                <li>Explored technology roles through practical activities and Q&amp;A sessions with industry professionals, and learned how technology is applied within a large organisation.</li>
+                <li>Designed a Lloyds office concept focused on employee wellbeing and productivity, and presented ideas for improving the workplace experience.</li>
+              </ul>
+            </details>
+          </div>
+
+          <div class="projects__card card--discover">
+            <h2>Work Experience 4</h2>
+            <h3>Discover Tech</h3>
+            <p class="card__role">Software and Cybersecurity Work Experience Student</p>
+            <p class="card__meta">Jul 2026 · Brentford</p>
+            <details>
+              <summary>View</summary>
+              <ul>
+                <li>Completed workshops and team projects covering technology and web development.</li>
+                <li>Applied HTML and CSS to build temporary websites and used GitHub to manage project work.</li>
+              </ul>
+            </details>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-<!-- Projects Section -->
-
-  <section id="projects">
-    <div class="projects" id="projects">
-      <h1>My Projects</h1>
-      <div class="projects__wrapper">
-        <div class="projects__card">
-          <h2>Project 1</h2>
-          <div class="projects__btn"><button>View</button></div>
-        </div>
-        <div class="projects__card">
-          <h2>Project 2</h2>
-          <div class="projects__btn"><button>View</button></div>
-        </div>
-        <div class="projects__card">
-          <h2>Project 3</h2>
-          <div class="projects__btn"><button>View</button></div>
-        </div>
-        <div class="projects__card">
-          <h2>Project 4</h2>
-          <div class="projects__btn"><button>View</button></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-
+    <!-- Education & Extracurriculars -->
     <section id="services">
       <div class="services">
-      <div class="services__container">
-        <h1>My Services</h1>
-        <div class="services__grid">
-          <div class="services__left">
-            <div class="services__content">
-              <img src="king.png" alt="chess piece" />
-              <div class="services__desc">
-                <h2>Game Development</h2>
-                <p>
-                  Use of Thonny and VS Code to create python based games and Unity to develop a range of video based and 2D games.
-                </p>
+        <div class="services__container">
+          <h1>Education &amp; Extracurriculars</h1>
+          <div class="services__grid">
+            <div class="services__left">
+              <div class="services__content">
+                <img src="king.png" alt="chess piece" />
+                <div class="services__desc">
+                  <h2>Education</h2>
+                  <p>
+                    Isleworth and Syon School, London. 9 GCSEs (2023–2025): 2 Grade 9s, 5 Grade 8s and 2 Grade 7s, including Mathematics (8) and English (8). Now studying A-Levels (2025–2027), predicted A*AA in Economics (A*), Mathematics (A) and Physics (A).
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="services__content">
-              <img src="queen.png" alt="chess piece" />
-              <div class="services__desc">
-                <h2>Websites and web apps</h2>
-                <p>
-                  VS Code and X-Code to develop portoflio website templates and trail websites with a basic range of javascript and websites for small businesses and companies.
-                </p>
+              <div class="services__content">
+                <img src="queen.png" alt="chess piece" />
+                <div class="services__desc">
+                  <h2>Volunteering</h2>
+                  <p>
+                    Science Lab Assistant (Oct 2025 – Jun 2026): worked in a team of 3 supporting science practicals for groups of up to 25 GCSE students. Maths Assistant / Tutor (Sep 2023 – Feb 2025): tutored groups of 10–13 students in GCSE Maths and UKMT Maths Challenge problems, progressing from a team of 2 to leading sessions independently.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="services__content">
-              <img src="bishop.png" alt="chess piece" />
-              <div class="services__desc">
-                <h2>Mobile Apps</h2>
-                <p>
-                  Aiming to work with Technology and Software to engineering websites, apps or systems for different servics as a way to improve and apply my skills in a real work environment.
-                </p>
+              <div class="services__content">
+                <img src="bishop.png" alt="chess piece" />
+                <div class="services__desc">
+                  <h2>Achievements &amp; Awards</h2>
+                  <p>
+                    Senior Digital Ambassador. Duke of Edinburgh Award: Bronze and Silver completed, Gold in progress. UKMT Maths Challenge: Gold (Intermediate) and Silver (Senior). Level 2 Qualification in Sports Leadership (SL2), in progress.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-  </section>
+    </section>
 
-<!-- Contact Section -->
-
-<section id="contact">
-  <div class="container">
-    <h1>Contact Me</h1>
-    <div class="contact-details">
-      
-      <p class="info2">Email (Personal): <a class="info">hanaanhussain.app@gmail.com</a></p>
-      <p class="info2">Email (School/Work): <a class="info">20hhussain@isleworthsyon.org</a></p>
-      <p class="info2">Phone: <a class="info">07555186105</a></p>
-    </div>
-    <div class="social-media-icons2">
-      <a class="social-icon2"><i class='bx bxl-github'></i></a>
-      <a class="social-icon2"><i class='bx bxl-instagram'></i></a>
-      <a class="social-icon2"><i class='bx bxl-linkedin'></i></a>
-      <a class="social-icon2"><i class='bx bxl-twitter'></i></a>
-    </div>
-  </div>
-</section>
-</body>
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <h1>Contact Me</h1>
+        <div class="contact-details">
+          <p class="info2">Email: <a class="info" href="mailto:hanaanhussain.app@gmail.com">hanaanhussain.app@gmail.com</a></p>
+          <p class="info2">Phone: <a class="info" href="tel:07555186105">07555186105</a></p>
+        </div>
+        <div class="social-media-icons2">
+          <a class="social-icon2" href="https://www.linkedin.com/in/hanaan-hussain-472a913a0/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
