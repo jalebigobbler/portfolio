@@ -206,7 +206,7 @@
   align-items: start;
   gap: 20px;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1000px;
 }
 .projects__card {
   min-height: 425px;
@@ -363,3 +363,73 @@
   .column__left h2 { font-size: 26px; }
   .services__content { flex-direction: column; gap: 16px; }
 }
+
+/* Additions */
+.social-media-icons { align-items: center; flex-wrap: wrap; }
+.btn--outline {
+  background: black;
+  color: var(--maincolor);
+  border: 2px solid var(--maincolor);
+  box-shadow: 0 0 25px transparent;
+  padding: 6px 20px;
+  font-size: 16px;
+}
+.btn--outline:hover { background: var(--maincolor); color: black; box-shadow: 0 0 25px var(--maincolor); }
+
+.code-window {
+  width: 100%;
+  max-width: 520px;
+  background: #0d1117;
+  border: 1px solid #1f2a3a;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(46, 139, 253, 0.25);
+  overflow: hidden;
+}
+.code-window__bar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 14px;
+  background: #161b22;
+}
+.code-window__bar span { width: 11px; height: 11px; border-radius: 50%; background: #3b4252; }
+.code-window__bar span:nth-child(1) { background: #ff5f57; }
+.code-window__bar span:nth-child(2) { background: #febc2e; }
+.code-window__bar span:nth-child(3) { background: #28c840; }
+.code-window__bar em { margin-left: 10px; font-size: 13px; font-style: normal; color: #8b949e; }
+.code-window pre {
+  padding: 22px 20px;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #e6edf3;
+}
+.code-window code { font-family: inherit; }
+.code-window i { font-style: normal; font-family: inherit; }
+.code-window .k { color: #ff7b72; }
+.code-window .p { color: #79c0ff; }
+.code-window .s { color: #a5d6a7; }
+
+.card--micro { background: linear-gradient(135deg, #ffffff, #d9f2fc 45%, #8fd8f5); color: #0b2a3a; }
+.card--micro:hover { box-shadow: 0 0 25px #8fd8f5; }
+.card--micro details ul { background: rgba(255, 255, 255, 0.6); color: #0b2a3a; }
+.card--maths { background: linear-gradient(135deg, #ff6b6b, #e0282e 50%, #a30f1a); }
+.card--maths:hover { box-shadow: 0 0 25px #e0282e; }
+
+.services__icon {
+  flex: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 72px;
+  height: 72px;
+  margin-right: 40px;
+  border-radius: 16px;
+  font-size: 2.2rem;
+  color: var(--maincolor);
+  background: var(--second-bg-color);
+  border: 2px solid var(--maincolor);
+  box-shadow: 0 0 20px rgba(46, 139, 253, 0.3);
+}
+@media (max-width: 800px) { .services__icon { margin-right: 0; } .code-window pre { font-size: 12px; } }
