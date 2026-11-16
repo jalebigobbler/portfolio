@@ -123,8 +123,8 @@
 .home__img { width: 100%; height: auto; max-height: 560px; }
 .name__span { text-shadow: 0 0 25px var(--maincolor); }
 .info__me {
-  color: var(--maincolor);
-  text-shadow: 0 0 25px var(--maincolor);
+  color: #6cb2ff;
+  text-shadow: 0 0 25px #6cb2ff;
 }
 .social-media-icons { display: flex; gap: 20px; }
 .social-icon {
@@ -403,9 +403,9 @@
 }
 .code-window code { font-family: inherit; }
 .code-window i { font-style: normal; font-family: inherit; }
-.code-window .k { color: #ff7b72; }
-.code-window .p { color: #79c0ff; }
-.code-window .s { color: #a5d6a7; }
+.code-window .k { color: #4da3ff; }
+.code-window .p { color: #ffa657; }
+.code-window .s { color: #ffa657; }
 
 .card--micro { background: linear-gradient(to right, #8f94fb, #4e54c8); }
 .card--micro:hover { box-shadow: 0 0 25px #6f74e6; }
