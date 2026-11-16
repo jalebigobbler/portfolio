@@ -230,14 +230,10 @@
 .card__role { text-align: center; font-size: 15px; line-height: 1.5; }
 .card__meta { text-align: center; font-size: 14px; opacity: 0.85; }
 
-.card--cisco {
-  background: linear-gradient(135deg, #00bceb, #049fd9 50%, #0a60a8);
-}
-.card--cisco:hover { box-shadow: 0 0 25px #049fd9; }
-.card--cyber {
-  background: linear-gradient(135deg, #ffb347, #ff7a1a 50%, #d9480f);
-}
-.card--cyber:hover { box-shadow: 0 0 25px #ff7a1a; }
+.card--cisco { background: linear-gradient(to top, #0083fe, #00fff0); text-shadow: 0 1px 4px rgba(0,0,0,.45); }
+.card--cisco:hover { box-shadow: 0 0 25px #00c8ff; }
+.card--cyber { background: linear-gradient(to right, #fdcf58, #ff0000); text-shadow: 0 1px 4px rgba(0,0,0,.45); }
+.card--cyber:hover { box-shadow: 0 0 25px #ff4d2e; }
 .card--lloyds {
   background: linear-gradient(135deg, #2fb76b, #00875a 50%, #006a4d);
 }
@@ -411,11 +407,11 @@
 .code-window .p { color: #79c0ff; }
 .code-window .s { color: #a5d6a7; }
 
-.card--micro { background: linear-gradient(135deg, #ffffff, #f3fbff 55%, #cdeefb); color: #0b2a3a; }
-.card--micro:hover { box-shadow: 0 0 25px #8fd8f5; }
-.card--micro details ul { background: rgba(255, 255, 255, 0.6); color: #0b2a3a; }
-.card--maths { background: linear-gradient(135deg, #c81d25, #e8432b 55%, #f7a823); }
-.card--maths:hover { box-shadow: 0 0 25px #e8432b; }
+.card--micro { background: linear-gradient(to right, #8f94fb, #4e54c8); }
+.card--micro:hover { box-shadow: 0 0 25px #6f74e6; }
+.card--money { background: linear-gradient(135deg, #fbe9a0, #e6b422 50%, #a8780f); color: #2b1d00; }
+.card--money:hover { box-shadow: 0 0 25px #e6b422; }
+.card--money details ul { background: rgba(255, 255, 255, 0.45); color: #2b1d00; }
 
 .services__icon {
   flex: none;
