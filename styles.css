@@ -429,3 +429,10 @@
   box-shadow: 0 0 20px rgba(46, 139, 253, 0.3);
 }
 @media (max-width: 800px) { .services__icon { margin-right: 0; } .code-window pre { font-size: 12px; } }
+
+/* Education lists and medal colours */
+.services__desc ul { padding-left: 20px; line-height: 2; }
+.services__desc li::marker { color: var(--maincolor); }
+.medal--gold { color: #ffd34d; font-weight: 600; }
+.medal--silver { color: #d3d8de; font-weight: 600; }
+.medal--bronze { color: #d98a4b; font-weight: 600; }
